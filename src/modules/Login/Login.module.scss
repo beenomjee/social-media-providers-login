@@ -1,0 +1,42 @@
+@import "../../styles";
+
+.wrapper {
+  @include center();
+  min-height: 100vh;
+
+  & > .container {
+    padding: 5rem;
+    width: 95vw;
+    max-width: 40rem;
+    background-color: $light;
+    @include radius(2rem);
+    @include flex(column, stretch, flex-start, 1.6rem);
+
+    & > button {
+      border: none;
+      outline: none;
+      padding: 0.8rem 1.6rem;
+      @include flex(row, center, flex-start, 0.8rem);
+      border-radius: 0.5rem;
+      cursor: pointer;
+      @include shadow(rgba(0, 0, 0, 0.1));
+      @include font(1.4rem, 600);
+      & > span {
+        @include center();
+      }
+
+      &:nth-child(1) {
+        color: $white;
+        background-color: $link;
+      }
+      &:nth-child(2) {
+        color: $dark;
+        background-color: $white;
+      }
+      &:nth-child(3) {
+        color: $white;
+        background-color: $black;
+      }
+    }
+  }
+}

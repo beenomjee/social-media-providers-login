@@ -1,0 +1,11 @@
+@import "../../styles";
+
+.container {
+  @include flex(column, center, center, 1.6rem);
+  min-height: 100vh;
+  @include font(1.4rem);
+
+  & > img {
+    @include avatar(10rem);
+  }
+}
